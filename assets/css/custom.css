@@ -1,0 +1,54 @@
+/* Added CSS to template */
+
+/* Added icon row with colors for all the icons used */
+.icon-row {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.iconify { 
+  width: 2em; 
+  height: 2em; 
+}
+
+.fa-react {
+  color: #5fd3f3;
+}
+
+.fa-css3-alt {
+  color: #2862e9;
+}
+
+.fa-html5 {
+  color: #dc4a30;
+}
+
+.fa-js-square{
+  color: #efd43a;
+}
+
+.fa-bootstrap{
+  color: #8a4ff5;
+}
+
+.fa-wordpress {
+  color: #2c7196;
+}
+
+.fa-wix{
+  color: #f1c638;
+}
+
+.fa-elementor {
+  background: rgb(79,62,96);
+  background: linear-gradient(38deg, rgba(79,62,96,1) 33%, rgba(224,63,86,1) 73%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
