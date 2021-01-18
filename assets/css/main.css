@@ -11,6 +11,8 @@
 	--dark-blue:#1d2d50;
 	--torquise:#133b5c;
 	--blue:#1e5f74;
+	--purple:#281d4b;
+	--grey:#17303d;
 	--tan:#fcdab7;
 }
 
@@ -2725,15 +2727,15 @@ input, select, textarea {
 			}
 
 			.tiles article.style4 > .image:before {
-				background-color: var(--tan);
+				background-color: var(--purple);
 			}
 
 			.tiles article.style5 > .image:before {
-				background-color: var(--dark-blue);
+				background-color: var(--tan);
 			}
 
 			.tiles article.style6 > .image:before {
-				background-color: var(--torquise);
+				background-color: var(--grey);
 			}
 
 			body:not(.is-touch) .tiles article:hover > .image {
