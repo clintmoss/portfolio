@@ -1,5 +1,5 @@
-
-<?php include_once("index.html"); 
+<?php
+// If you are using Composer
 require 'vendor/autoload.php';
 
 // If you are not using Composer (recommended)
