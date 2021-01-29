@@ -13,14 +13,16 @@ $thankyou = "Thank you! Redirecting you back to my portfolio...";
 $from = new SendGrid\Email($name, "clint.mossman@gmail.com");
 $subject = "Portfolio Message";
 $to = new SendGrid\Email(null, "clint.mossman@gmail.com");
-$content = new SendGrid\Content("text/plain", $message . '\n\nEmail: ' . $email);
+$content = new SendGrid\Content("text/plain", $message . "\n\nEmail: " . $email);
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
 $apiKey = getenv('SENDGRID_API_KEY');
 $sg = new \SendGrid($apiKey);
 
 $response = $sg->client->mail()->send()->post($mail);
+ob_start();
 echo $thankyou;
+ob_flush();
 sleep(3);
 header('Location: https://clintmossman-portfolio.herokuapp.com/');
 exit();
