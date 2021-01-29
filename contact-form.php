@@ -23,8 +23,7 @@ $response = $sg->client->mail()->send()->post($mail);
 ob_start();
 echo $thankyou;
 ob_flush();
-sleep(3);
-header('Location: https://clintmossman-portfolio.herokuapp.com/');
-exit();
+echo"<script>setTimeout(\"location.href = 'https://clintmossman-portfolio.herokuapp.com/';\",1500);</script>";
+
 
 ?>
