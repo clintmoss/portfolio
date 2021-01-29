@@ -5,13 +5,16 @@ require 'vendor/autoload.php';
 // If you are not using Composer (recommended)
 // require("path/to/sendgrid-php/sendgrid-php.php");
 
-$from = new SendGrid\Email(null, "test@example.com");
-$subject = "Hello World from the SendGrid PHP Library!";
-$to = new SendGrid\Email(null, "test@example.com");
-$content = new SendGrid\Content("text/plain", "Hello, Email!");
+$name = $_POST['name']; 
+$message = $_POST['message'];
+
+$from = new SendGrid\Email($name, "clint.mossman@gmail.com");
+$subject = "Portfolio Message";
+$to = new SendGrid\Email(null, "clint.mossman@gmail.com");
+$content = new SendGrid\Content("text/plain", $message);
 $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
-$apiKey = getenv('PNABHrDDTqGC5iyDLsw9Ag');
+$apiKey = getenv('SENDGRID_API_KEY');
 $sg = new \SendGrid($apiKey);
 
 $response = $sg->client->mail()->send()->post($mail);
