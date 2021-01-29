@@ -20,8 +20,6 @@ $apiKey = getenv('SENDGRID_API_KEY');
 $sg = new \SendGrid($apiKey);
 
 $response = $sg->client->mail()->send()->post($mail);
-sleep(3);
-// echo $thankyou;
 header('Location: https://clintmossman-portfolio.herokuapp.com/');
 
 ?>
