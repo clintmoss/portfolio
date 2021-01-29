@@ -9,6 +9,7 @@ $name = $_POST['name'];
 $message = $_POST['message'];
 $email = $_POST['email'];
 $thankyou = "Thank you! Redirecting you back to my portfolio...";
+echo "<style>@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');</style>";
 
 $from = new SendGrid\Email($name, "clint.mossman@gmail.com");
 $subject = "Portfolio Message";
@@ -20,7 +21,7 @@ $apiKey = getenv('SENDGRID_API_KEY');
 $sg = new \SendGrid($apiKey);
 
 $response = $sg->client->mail()->send()->post($mail);
-echo "<div style='height:100vh;width:100vw;background-color:#e7e7e7;display:flex;align-items:center;justify-content:center;'><h1 style='color:##1d2d50;font-size:5em;'>{$thankyou}</h1></div>" ;
+echo "<div style='height:100vh;width:100vw;background-color:#e7e7e7;display:flex;align-items:center;justify-content:center;'><h1 style='color:##1d2d50;font-size:3em;font-family:'Source Sans Pro', sans-serif;'>{$thankyou}</h1></div>" ;
 echo"<script>setTimeout(\"location.href = 'https://clintmossman-portfolio.herokuapp.com/';\",1500);</script>";
 
 
