@@ -8,7 +8,7 @@ require 'vendor/autoload.php';
 $name = $_POST['name']; 
 $message = $_POST['message'];
 $email = $_POST['email'];
-$thankyou = 'Thank you! Redirecting you back to my portfolio...';
+$thankyou = "Thank you! Redirecting you back to my portfolio...";
 
 $from = new SendGrid\Email($name, "clint.mossman@gmail.com");
 $subject = "Portfolio Message";
@@ -23,9 +23,5 @@ $response = $sg->client->mail()->send()->post($mail);
 sleep(3);
 echo $thankyou;
 header('Location: https://clintmossman-portfolio.herokuapp.com/');
-exit();
-// echo $response->statusCode();
-// echo $response->headers();
-// echo $response->body();
 
 ?>
