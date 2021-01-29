@@ -21,7 +21,7 @@ $sg = new \SendGrid($apiKey);
 
 $response = $sg->client->mail()->send()->post($mail);
 sleep(3);
-echo $thankyou;
+// echo $thankyou;
 header('Location: https://clintmossman-portfolio.herokuapp.com/');
 
 ?>
