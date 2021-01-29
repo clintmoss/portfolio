@@ -20,9 +20,7 @@ $apiKey = getenv('SENDGRID_API_KEY');
 $sg = new \SendGrid($apiKey);
 
 $response = $sg->client->mail()->send()->post($mail);
-ob_start();
-echo $thankyou;
-ob_flush();
+echo "<div style='height:100vh;width:100vw;background-color:#e7e7e7;display:flex;align-items:center;justify-content:center;'><h1 style='color:##1d2d50;font-size:5em;'>{$thankyou}</h1></div>" ;
 echo"<script>setTimeout(\"location.href = 'https://clintmossman-portfolio.herokuapp.com/';\",1500);</script>";
 
 
