@@ -1,0 +1,22 @@
+/* Custom CSS added By Clint Mossman */
+
+:root {
+  --night: #011502;
+  --drk-green: #01200F;
+  --teal: #9EC5AB;
+  --drk-blue: #32746D;
+  --blue: #104F55;
+}
+
+/* Change Colors for website */
+
+h1.major:after {
+  background-image: -moz-linear-gradient(to right, var(--night), var(--drk-blue));
+  background-image: -webkit-linear-gradient(to right, var(--night), var(--drk-blue));
+  background-image: -ms-linear-gradient(to right, var(--night), var(--drk-blue));
+  background-image: linear-gradient(to right, var(--night), var(--drk-blue));
+}
+
+/* Change Fonts for website  */
+
+/* Add animtations  */
