@@ -1,22 +1,267 @@
 /* Custom CSS added By Clint Mossman */
 
-:root {
-  --night: #011502;
-  --drk-green: #01200F;
-  --teal: #9EC5AB;
-  --drk-blue: #32746D;
-  --blue: #104F55;
+
+/* Add new fonts */
+
+@font-face {
+  font-family: 'Rozelle';
+  src: url('../fonts/RozelleRegular.otf') format('opentype'); /* or 'truetype' for TTF */
+  font-weight: normal;
+  font-style: normal;
 }
 
-/* Change Colors for website */
+@font-face {
+  font-family: 'Noopla';
+  src: url('../fonts/NooplaRegular.ttf') format('truetype'); /* or 'truetype' for TTF */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Yantramanav-Light';
+  src: url('../fonts/Yantramanav-Light.ttf') format('truetype'); /* or 'truetype' for TTF */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Yantramanav-Bold';
+  src: url('../fonts/Yantramanav-Bold.ttf') format('truetype'); /* or 'truetype' for TTF */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Yantramanav-Medium';
+  src: url('../fonts/Yantramanav-Medium.ttf') format('truetype'); /* or 'truetype' for TTF */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+:root {
+  --night: #423C42;
+  --grey: #2f292f;
+  --drk-green: #829324;
+  --green: #A8BC3B;
+  --pebble: #F4F6F6;
+  --pebble-drk: #d5d6d6;
+  --blue: #7DC1E8;
+  --dark-hover: rgba(67, 61, 67, .075);
+  --white: #fff;
+  --text-white: #d0d0d0;
+}
+
+html {
+  font-size: 18px;
+}
+
+h1 {
+  color: var(--pebble); 
+  font-family: "Noopla", sans-serif;
+  letter-spacing: 3px;
+  text-transform: lowercase;
+  font-size: 4.2rem;
+}
+
+h2 {
+  font-family: "Rozelle";
+  font-size: 3.157rem;
+}
+
+h3 {
+  font-size: 2.369rem;
+}
+
+h4 {
+  font-size: 1.777rem;
+}
+
+p {
+  font-family: "Yantramanav-Light";
+  font-size: 1.25rem;
+  color: var(--text-white);
+}
+
+a {
+  font-family: "Yantramanav-Bold";
+  text-transform: uppercase;
+  font-size: .8rem !important;
+}
+
+/* 
+pebble - F4F6F6;
+grey dark - 423C42
+blue - 7DC1E8
+green - A8BC3B
+*/
 
 h1.major:after {
-  background-image: -moz-linear-gradient(to right, var(--night), var(--drk-blue));
-  background-image: -webkit-linear-gradient(to right, var(--night), var(--drk-blue));
-  background-image: -ms-linear-gradient(to right, var(--night), var(--drk-blue));
-  background-image: linear-gradient(to right, var(--night), var(--drk-blue));
+  background-image: -moz-linear-gradient(to right, var(--pebble), var(--pebble-drk));
+  background-image: -webkit-linear-gradient(to right, var(--pebble), var(--pebble-drk));
+  background-image: -ms-linear-gradient(to right, var(--pebble), var(--pebble-drk));
+  background-image: linear-gradient(to right, var(--pebble), var(--pebble-drk));
 }
 
-/* Change Fonts for website  */
+#intro {
+  background-image: -moz-linear-gradient(to bottom, var(--night), var(--drk-green));
+  background-image: -webkit-linear-gradient(to bottom, var(--night), var(--drk-green));
+  background-image: -ms-linear-gradient(to bottom, var(--night), var(--drk-green));
+  background-image: linear-gradient(to bottom, var(--night) , var(--drk-green) );
+}
+
+#intro p  {
+  font-size: 1.25rem !important;
+  color: var(--white);
+}
+
+#contact p {
+  color: var(--white)
+}
+
+#resume {
+  background-image: -moz-linear-gradient(to bottom, var(--blue), var(--drk-green));
+  background-image: -webkit-linear-gradient(to bottom, var(--blue), var(--drk-green));
+  background-image: -ms-linear-gradient(to bottom, var(--blue), var(--drk-green));
+  background-image: linear-gradient(to bottom, var(--blue), var(--drk-green));
+}
+
+#contact {
+  background-image: -moz-linear-gradient(to bottom, var(--drk-green), var(--grey));
+  background-image: -webkit-linear-gradient(to bottom, var(--drk-green), var(--grey));
+  background-image: -ms-linear-gradient(to bottom, var(--drk-green), var(--grey));
+  background-image: linear-gradient(to bottom, var(--drk-green), var(--grey));
+}
+
+#sidebar nav a:after {
+  background-image: linear-gradient(to right, var(--pebble), var(--blue))
+}
+
+#header {
+  background-color: var(--grey) !important;
+}
+
+#footer {
+  background-color: var(--grey);
+}
+
+.wrapper.alt {
+  background-color: var(--grey) !important;
+}
+
+#whatIDo {
+  color: var(--grey);
+}
+
+#whatIDo h2 {
+  color: var(--grey);
+}
+
+#whatIDo p {
+  color: var(--grey) !important;
+}
+
+.dark {
+  border-color: var(--grey) !important;
+  color: var(--grey) !important;
+  transition: .5s ease;
+}
+
+.dark:hover {
+  border-color: var(--night) !important;
+  color: var(--grey) !important;
+  background-color: var(--dark-hover);
+  transition: .5s ease;
+}
+
+.third {
+  width: 33%;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.title {
+  font-family: "Noopla", sans-serif;
+  text-transform: lowercase;
+  font-size: 2rem !important;
+  letter-spacing: 3px;
+  margin-top: -10px;
+}
+
+ul.contact {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resume-img {
+  max-width: 75%;
+  margin: auto;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.email a {
+  text-transform: none;
+}
+
+.logo {
+  max-width: 100px;
+}
+
+.sidebar-logo {
+  display: none;
+}
+
+.inner ul.alt {
+  font-size: 1.25rem;
+  color: var(--text-white);
+}
+
+.dut-tile {
+  background-color: black;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.holly-tile {
+  background-color: #98bb6f;
+  background-size: 250px !important;
+  background-repeat: no-repeat;
+  background-position: center center !important;
+}
+
+.pcc-tile {
+  background-color: #045594;
+  background-size: 250px !important;
+  background-repeat: no-repeat;
+  background-position: center center !important;
+}
+
+.pcc-tile-black {
+  background-color: black;
+  background-size: 250px !important;
+  background-repeat: no-repeat;
+  background-position: center center !important;
+}
+
+.yes-tile {
+  background-color: var(--white);
+  background-size: 250px !important;
+  background-repeat: no-repeat;
+  background-position: center center !important;
+}
+
+@media screen and (min-width: 1280px) {
+  .sidebar-logo {
+    max-width: 75px;
+    display: block;
+  }
+}
+
 
 /* Add animtations  */
