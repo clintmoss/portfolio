@@ -87,8 +87,11 @@ p {
 
 a {
   font-family: "Yantramanav-Bold";
-  text-transform: uppercase;
   font-size: .8rem !important;
+}
+
+ul.contact a {
+  font-size: 1.25rem !important;
 }
 
 /* 
